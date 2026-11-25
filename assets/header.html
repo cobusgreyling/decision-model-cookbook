@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Decision model cookbook</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1600px;
+    height: 900px;
+    background: #f6f5f2;
+    color: #111111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .card {
+    box-sizing: border-box;
+    width: 1600px;
+    height: 900px;
+    padding: 64px 72px 52px;
+    position: relative;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .mark {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    background: #161616;
+    position: relative;
+  }
+  .mark span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f15a22;
+    left: 9px;
+    top: 9px;
+  }
+  .url {
+    color: #8d8b86;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .kicker {
+    margin-top: 78px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .pill {
+    background: #161616;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 7px 12px 6px;
+    border-radius: 999px;
+  }
+  .kicker-text {
+    font-size: 28px;
+    font-weight: 650;
+    letter-spacing: -0.03em;
+  }
+  h1 {
+    margin: 18px 0 0;
+    font-size: 108px;
+    line-height: 0.9;
+    font-weight: 750;
+    letter-spacing: -0.045em;
+    max-width: 860px;
+  }
+  .sub {
+    margin-top: 28px;
+    max-width: 820px;
+    white-space: nowrap;
+    color: #6e6c68;
+    font-size: 26px;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+  .chip {
+    margin-top: 36px;
+    display: inline-block;
+    background: #eeece8;
+    color: #3c3c3c;
+    border-radius: 14px;
+    padding: 16px 22px;
+    font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  .foot {
+    position: absolute;
+    left: 72px;
+    right: 72px;
+    bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    color: #a19f9a;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .tree {
+    position: absolute;
+    right: 36px;
+    top: 150px;
+    width: 620px;
+    height: 600px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="brand"><div class="mark"><span></span></div>Cookbook</div>
+      <div class="url">cobusgreyling/decision-model-cookbook</div>
+    </div>
+    <div class="kicker">
+      <div class="pill">LIVE</div>
+      <div class="kicker-text">Decision model cookbook</div>
+    </div>
+    <h1>Decision<br />Model Cookbook</h1>
+    <p class="sub">Typed questions. One call. A probability the gate can read.</p>
+    <div class="chip">$ python3 -m cookbook</div>
+    <div class="foot">
+      <div>Cobus Greyling</div>
+      <div>MIT · jev-1.13.0 · 10/10</div>
+    </div>
+    <svg class="tree" viewBox="0 0 620 600" fill="none" aria-hidden="true">
+      <path d="M70 300 C 180 300, 200 118, 300 118" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M300 118 C 380 118, 400 70, 470 70" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M300 118 C 390 118, 410 118, 500 118" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M300 118 C 380 118, 400 168, 480 168" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M250 300 C 330 300, 340 210, 430 188" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M250 300 C 340 300, 360 250, 480 236" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M70 300 C 180 300, 200 470, 300 482" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M300 482 C 380 482, 400 430, 480 422" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M300 482 C 390 482, 420 482, 520 482" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M300 482 C 380 482, 410 540, 490 546" stroke="#c9c7c2" stroke-width="2.5"/>
+      <path d="M70 300 H 250 H 520" stroke="#f15a22" stroke-width="3.5"/>
+      <text x="168" y="96" fill="#8a8883" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-style="italic">0.07</text>
+      <text x="300" y="348" fill="#f15a22" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="32" font-style="italic">0.93</text>
+      <g fill="#b7b5b0">
+        <circle cx="300" cy="118" r="7"/>
+        <circle cx="470" cy="70" r="6"/>
+        <circle cx="500" cy="118" r="6"/>
+        <circle cx="480" cy="168" r="6"/>
+        <circle cx="430" cy="188" r="6"/>
+        <circle cx="480" cy="236" r="6"/>
+        <circle cx="300" cy="482" r="7"/>
+        <circle cx="480" cy="422" r="6"/>
+        <circle cx="520" cy="482" r="6"/>
+        <circle cx="490" cy="546" r="6"/>
+      </g>
+      <g fill="#f15a22">
+        <circle cx="70" cy="300" r="9"/>
+        <circle cx="250" cy="300" r="9"/>
+        <circle cx="520" cy="300" r="9"/>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>

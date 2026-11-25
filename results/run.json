@@ -1,0 +1,375 @@
+{
+  "model": "jev-1.13.0",
+  "rows": [
+    {
+      "id": "t1",
+      "action": "route:billing",
+      "choice": "billing",
+      "probabilities": {
+        "billing": 1.0,
+        "technical": 0.0,
+        "shipping": 0.0,
+        "accounts": 0.0
+      },
+      "fits": 0.98,
+      "compound": 0.08,
+      "refund": 0.99,
+      "jailbreak": 0.01,
+      "contact": 0.07,
+      "angry": 0.39,
+      "urgency": 2.02,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.98,
+        "3": 0.02
+      },
+      "ms": 409.3,
+      "usage": {
+        "input_tokens": 559,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t2",
+      "action": "route:technical",
+      "choice": "technical",
+      "probabilities": {
+        "billing": 0.0,
+        "technical": 1.0,
+        "shipping": 0.0,
+        "accounts": 0.0
+      },
+      "fits": 0.92,
+      "compound": 0.22,
+      "refund": 0.01,
+      "jailbreak": 0.03,
+      "contact": 0.99,
+      "angry": 0.54,
+      "urgency": 3.0,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 1.0
+      },
+      "ms": 412.8,
+      "usage": {
+        "input_tokens": 564,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t3",
+      "action": "route:shipping",
+      "choice": "shipping",
+      "probabilities": {
+        "billing": 0.0,
+        "technical": 0.0,
+        "shipping": 1.0,
+        "accounts": 0.0
+      },
+      "fits": 0.94,
+      "compound": 0.1,
+      "refund": 0.03,
+      "jailbreak": 0.01,
+      "contact": 0.09,
+      "angry": 0.61,
+      "urgency": 2.03,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.02,
+        "1": 0.03,
+        "2": 0.85,
+        "3": 0.1
+      },
+      "ms": 449.0,
+      "usage": {
+        "input_tokens": 557,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t4",
+      "action": "close",
+      "choice": "shipping",
+      "probabilities": {
+        "billing": 0.01,
+        "technical": 0.23,
+        "shipping": 0.76,
+        "accounts": 0.0
+      },
+      "fits": 0.06,
+      "compound": 0.02,
+      "refund": 0.02,
+      "jailbreak": 0.01,
+      "contact": 0.02,
+      "angry": 0.03,
+      "urgency": 0.0,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "ms": 364.4,
+      "usage": {
+        "input_tokens": 550,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t5",
+      "action": "block",
+      "choice": "technical",
+      "probabilities": {
+        "billing": 0.0,
+        "technical": 0.93,
+        "shipping": 0.0,
+        "accounts": 0.07
+      },
+      "fits": 0.04,
+      "compound": 0.59,
+      "refund": 0.01,
+      "jailbreak": 0.99,
+      "contact": 0.03,
+      "angry": 0.14,
+      "urgency": 0.31,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.89,
+        "1": 0.0,
+        "2": 0.01,
+        "3": 0.1
+      },
+      "ms": 439.1,
+      "usage": {
+        "input_tokens": 555,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t6",
+      "action": "route:accounts",
+      "choice": "accounts",
+      "probabilities": {
+        "billing": 0.0,
+        "technical": 0.0,
+        "shipping": 0.0,
+        "accounts": 1.0
+      },
+      "fits": 0.96,
+      "compound": 0.06,
+      "refund": 0.01,
+      "jailbreak": 0.09,
+      "contact": 0.57,
+      "angry": 0.21,
+      "urgency": 2.35,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.08,
+        "1": 0.01,
+        "2": 0.39,
+        "3": 0.52
+      },
+      "ms": 339.5,
+      "usage": {
+        "input_tokens": 553,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t7",
+      "action": "route:billing",
+      "choice": "billing",
+      "probabilities": {
+        "billing": 1.0,
+        "technical": 0.0,
+        "shipping": 0.0,
+        "accounts": 0.0
+      },
+      "fits": 0.96,
+      "compound": 0.08,
+      "refund": 0.02,
+      "jailbreak": 0.04,
+      "contact": 0.05,
+      "angry": 0.09,
+      "urgency": 0.42,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.75,
+        "1": 0.09,
+        "2": 0.16,
+        "3": 0.0
+      },
+      "ms": 425.9,
+      "usage": {
+        "input_tokens": 558,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t8",
+      "action": "route:technical",
+      "choice": "technical",
+      "probabilities": {
+        "billing": 0.0,
+        "technical": 1.0,
+        "shipping": 0.0,
+        "accounts": 0.0
+      },
+      "fits": 0.83,
+      "compound": 0.07,
+      "refund": 0.01,
+      "jailbreak": 0.01,
+      "contact": 0.2,
+      "angry": 0.17,
+      "urgency": 0.01,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "ms": 351.2,
+      "usage": {
+        "input_tokens": 556,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t9",
+      "action": "split",
+      "choice": "billing",
+      "probabilities": {
+        "billing": 0.93,
+        "technical": 0.07,
+        "shipping": 0.0,
+        "accounts": 0.0
+      },
+      "fits": 0.99,
+      "compound": 0.92,
+      "refund": 0.98,
+      "jailbreak": 0.02,
+      "contact": 0.1,
+      "angry": 0.67,
+      "urgency": 1.42,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.26,
+        "1": 0.13,
+        "2": 0.54,
+        "3": 0.07
+      },
+      "ms": 366.2,
+      "usage": {
+        "input_tokens": 558,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    },
+    {
+      "id": "t10",
+      "action": "close",
+      "choice": "technical",
+      "probabilities": {
+        "billing": 0.0,
+        "technical": 1.0,
+        "shipping": 0.0,
+        "accounts": 0.0
+      },
+      "fits": 0.06,
+      "compound": 0.09,
+      "refund": 0.02,
+      "jailbreak": 0.07,
+      "contact": 0.07,
+      "angry": 0.19,
+      "urgency": 0.12,
+      "urgency_legend": {
+        "0": "No deadline",
+        "1": "Within a week",
+        "2": "Within a day",
+        "3": "Within an hour"
+      },
+      "urgency_probabilities": {
+        "0": 0.94,
+        "1": 0.01,
+        "2": 0.03,
+        "3": 0.02
+      },
+      "ms": 349.0,
+      "usage": {
+        "input_tokens": 546,
+        "output_tokens": 160
+      },
+      "model": "jev-1.13.0"
+    }
+  ],
+  "fanout": {
+    "ticket": "t1",
+    "calls": 8,
+    "batched_ms": 355.4,
+    "batched_in": 559,
+    "batched_out": 160,
+    "serial_ms": 2943.1,
+    "serial_in": 2498,
+    "serial_out": 187
+  }
+}
